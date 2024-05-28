@@ -107,6 +107,12 @@ while True:
   current_colors_modified[increase_position] = current_colors_modified[increase_position] + modifier
   current_colors_modified[decrease_position] = current_colors_modified[decrease_position] - modifier
 
+  for i in range(3):
+    if current_colors_modified[i] > 255:
+      current_colors_modified[i] = 255
+    if current_colors_modified[i] < 0:
+      current_colors_modified[i] = 0
+
   f = tuple(current_colors_modified)
   
   # Arrange my colors on an 8x8 matrix
