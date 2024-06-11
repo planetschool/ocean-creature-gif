@@ -67,6 +67,7 @@ modifier = 40 # governs how much the sensor values will be accentuated
 # Starting time
 starting_time = datetime.now().strftime("%m-%d-%Y_%H:%M:%S")
 
+# Create data file and record original creature
 with open(team_name+"_"+starting_time+".csv", "w", buffering=1, newline='') as datafile:
 	data_writer = writer(datafile)
 	data_writer.writerow(image)
