@@ -41,10 +41,6 @@ sleep(1)
 # Set up and poll the color sensor
 sense.color.gain = 64 # Set the sensitivity of the sensor
 sense.color.integration_cycles = 64 # The interval at which the reading will be taken
-rgb = sense.color
-
-#re-assign the whale's eye color variable to the sensed color value
-b = (rgb.red, rgb.green, rgb.blue)
 
 # Set up and poll the rotation sensors
 orientation = sense.get_orientation_degrees()
