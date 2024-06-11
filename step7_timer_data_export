@@ -6,9 +6,10 @@ from time import sleep
 from datetime import datetime
 from csv import writer
 
+# Timer and team name
 team_name = "Whale_Demo"
 timer = 1
-
+increment = 0.1
 
 #### Code that makes the original creature image on the LED matrix
 # Declare colors as RGB values and store them in variables
@@ -74,8 +75,8 @@ with open(team_name+"_"+starting_time+".csv", "w", buffering=1, newline='') as d
 #### Create the GIF animation
 	while timer < 30:
 
-		timer = timer + 0.1
-		sleep(0.1)
+		timer = timer + increment
+		sleep(increment)
 		data_writer.writerow([timer, direction, rotation, d, f, g, b])
 		
 		### Color
