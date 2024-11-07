@@ -85,7 +85,7 @@ with open(team_name+"_"+starting_time+".csv", "w", buffering=1, newline='') as d
 	while timer<15:
 		
 		### Timer
-		timer = timer + increment
+		timer = round(timer + increment, 1)
 		sleep(increment)
 		
 		### Data Recording
