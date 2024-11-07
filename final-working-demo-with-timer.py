@@ -71,7 +71,7 @@ modifier = 40 # governs how much the sensor values will be accentuated
 while timer<15:
 	
 	### Timer
-	timer = timer + increment
+	timer = round(timer + increment, 1)
 	sleep(increment)
 	
 	### Color
